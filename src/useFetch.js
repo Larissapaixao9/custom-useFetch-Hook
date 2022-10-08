@@ -10,9 +10,14 @@ import axios from 'axios'
 //so we don't need to recreate them
 
 export default function useFetch(url) {
+
+    //states
     const [loading, setLoading] = React.useState(null)
+
     const [data, setData] = React.useState(false)
+
     const [erro, setErro] = React.useState(null)
+
   React.useEffect(()=>{
     setLoading(true)
     const fetchData = async()=>{
